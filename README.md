@@ -24,22 +24,39 @@ Finally, the respective movie's [IMDB page](https://www.imdb.com/title/tt1201607
 
 ## Features & Target
 
-The following features are organized from the scraped & parsed pages:
-    * Opening Weekend Theatres
-    * Release Date
-    * Studio Name
-    * Budget
-    * MPAA
-    * Genre
-    * Franchise
-    * Brand
+The following features are organized from the scraped & parsed pages:  
+  - Opening Weekend Theatres  
+  - Release Date  
+  - Studio Name  
+  - Budget  
+  - MPAA  
+  - Genre  
+  - Franchise  
+  - Brand  
 These features are imputed & engineered to arrive at a more accurate prediction.
 
 The target variable is **'Opening Weekeng Gross'**.  
 
 Additional information that was scraped and used for ancillary purposes included Release Link, Title, Domestic Gross, Max Theatres, Domestic to Opening Gross, Studio Link, Title ID, Running Length.  
 
-
 ## Tools Used
 
+  - Requests
+  - Beautiful Soup
+  - Pandas
+  - Numpy
+  - Matplotlib
+  - Seaborn
+  - Sci-kit Learn (subclasses: Metrics, Linear Model, Model Selection, Preprocessing, Pipeline)
+  - Statsmodel
+  
 ## Possible Impacts
+
+The final model achieved a R^2 score of 0.73 and a mean absolute error of $6,558,159 on the hold out test set. To provide context, the mean of all value in the hold out set is  $13,201,940, with the maximum value going as high as $191,271,100.
+
+Thus, the error is almost 50% of the mean value. Additionally, based on looking at the residual graphs, the model grossly over predicts for low value Opening Weekend Grosses & underpredicts quite a bit for huge blockbusters.   
+
+Based on the results, a lot of additional work in terms of gathering more informative features is required to create a better model.  
+Although **Budget** is quite an important feature, it really is a proxy for other factors, such as the director, lead actor(s) & marketing spend - which play a huge role in drawing huge crowds for Opening Weekends.  
+
+Lastly, it would be worth experimenting with separate models, based on binning of # of theatres the movie is getting released in on the opening weekend and/or if it is part of a franchise. 
