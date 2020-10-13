@@ -6,7 +6,7 @@ The following undertaking aims to predict the Opening Weekend Gross Revenue earn
 
 In the movie entertainment industry, the Opening Weekend is comprised of Friday, Saturday & Sunday; regardless of whether the movie is released on a Friday or not of that week. This revenue number holds a very high significance due to a multitude of factors: 
 
-  * Gross revenue earned on a movie's ticket sales is split between the movie theatres and the studios, based on complex agreements. But overall, studios get to keep maximum amount of earnings (50%+) from the final ticket sales at theatres in the first week; and a majority of the first week sales happens on the opening weekend. 
+  * Gross revenue earned on a movie's ticket sales is split between the movie theatres and the studios, based on complex agreements. But overall, studios get the maximum split % (typically 50%+) in the first week; and a majority of the first week sales happens on the opening weekend. 
   * Ratings for the movie are not available or highly publicized yet. A lot of opening revenue is incumbent on successful marketing & anticipation creation. Therefore, a blockbuster opening can help recoup a good portion of the movie costs.
   * A successful opening can help garner additional media attention that can further help buoy the movie for ticket sales.
  
@@ -33,18 +33,13 @@ The following features are organized from the scraped & parsed pages:
     * Genre
     * Franchise
     * Brand
+These features are imputed & engineered to arrive at a more accurate prediction.
+
+The target variable is **'Opening Weekeng Gross'**.  
+
+Additional information that was scraped and used for ancillary purposes included Release Link, Title, Domestic Gross, Max Theatres, Domestic to Opening Gross, Studio Link, Title ID, Running Length.  
 
 
-Release Link
-    * Title
-    * Domestic Gross
-    * Max Theatres
-     
-    * Opening Weekend Gross
-    * Domestic to Opening Gross
-    * Studio Link
-        * Title ID
-    * Running Length
 ## Tools Used
 
 ## Possible Impacts
