@@ -14,8 +14,8 @@ This makes getting a better understanding of Opening Weekend Gross along with th
 
 ## Learning Goals & Tools Used
 1. Curating datasets by oneself (Understanding possible factors that can affect target variable & acquiring custom data accordingly)
-  - Webscraping using **requests, Beautiful Soup,** and **Selenium.**
-  - Data Exploration & Cleaning/Preprocessing using **Pandas, Numpy, Matplotlib, and Seaborn**
+   - Webscraping using **requests, Beautiful Soup,** and **Selenium.**
+   * Data Exploration & Cleaning/Preprocessing using **Pandas, Numpy, Matplotlib, and Seaborn**
 2. Feature engineering and statistical regression modeling using **Sci-kit Learn and Statsmodel**
    * Feature interactions, scaling, and custom manipulations
    * Metrics: R<sup>2</sup>, MAE, RMSE, p-values
