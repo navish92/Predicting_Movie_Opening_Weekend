@@ -2,7 +2,7 @@
 
 The following undertaking aims to predict the Opening Weekend Gross Revenue earned by movies released in the U.S. Market, using Linear Regression Modeling techniques.
 
-## Description
+## Motivation
 
 In the movie entertainment industry, the Opening Weekend is comprised of Friday, Saturday & Sunday; regardless of whether the movie is released on a Friday or not of that week. This revenue number holds a very high significance due to a multitude of factors: 
 
@@ -12,6 +12,16 @@ In the movie entertainment industry, the Opening Weekend is comprised of Friday,
  
 This makes getting a better understanding of Opening Weekend Gross along with the various factors acting in tandem with it a highly important one.
 
+## Learning Goals & Tools Used
+1. Curating datasets by oneself (Understanding possible factors that can affect target variable & acquiring custom data accordingly)
+  - Webscraping using **requests, Beautiful Soup,** and **Selenium.**
+  - Data Exploration & Cleaning/Preprocessing using **Pandas, Numpy, Matplotlib, and Seaborn**
+2. Feature engineering and statistical regression modeling using **Sci-kit Learn and Statsmodel**
+  - Feature interactions, scaling, and custom manipulations
+  - Metrics: R<sup>2</sup>, MAE, RMSE, p-values
+  - Cross-validation & Pipeline creation
+  - Regularization using LASSO & Ridge
+  
 ## Data Used
 
 **Sources:** [Box Office Mojo](www.boxofficemojo.com), [IMDB](www.imdb.com)  
@@ -39,24 +49,12 @@ The target variable is **'Opening Weekeng Gross'**.
 
 Additional information that was scraped and used for ancillary purposes included Release Link, Title, Domestic Gross, Max Theatres, Domestic to Opening Gross, Studio Link, Title ID, and Running Length.  
 
-## Tools Used
-
-  - Requests
-  - Beautiful Soup
-  - Pandas
-  - Numpy
-  - Matplotlib
-  - Seaborn
-  - Sci-kit Learn (subclasses: Metrics, Linear Model, Model Selection, Preprocessing, Pipeline)
-  - Statsmodel
-  
-## Possible Impacts
+## Results
 
 The final model achieved a R<sup>2</sup> score of 0.73 and a mean absolute error of $6,558,159 on the hold out test set. To provide context, the mean of all values in the hold out set is  $13,201,940, with the maximum value going as high as $191,271,100.
 
 Thus, the error is almost 50% of the mean value. Additionally, by looking at the residual graphs, the model over predicts for low value Opening Weekend Grosses & underpredicts quite a bit for huge blockbusters.   
 
-Based on the results, a lot of additional work in terms of gathering more informative features is required to create a better model.  
-Although **Budget** is quite an important feature, it is a proxy for other factors, such as the director, lead actor(s) & marketing spend - which play possibly plays an important role in drawing huge crowds for Opening Weekends.  
+Based on the results, the target variable could be scaled logarithmically to solve for the long tail of high values. Or possibly, it would be worth experimenting with separate models, based on binning the # of theatres the movie is getting released in on the opening weekend and/or if it is part of a franchise. 
 
-Lastly, it would be worth experimenting with separate models, based on binning the # of theatres the movie is getting released in on the opening weekend and/or if it is part of a franchise. 
+Additionally, although **Budget** is quite an important feature, it is a proxy for other factors, such as the director, lead actor(s) & marketing spend - which play possibly plays an important role in drawing huge crowds for Opening Weekends.  
