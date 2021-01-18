@@ -17,10 +17,10 @@ This makes getting a better understanding of Opening Weekend Gross along with th
   - Webscraping using **requests, Beautiful Soup,** and **Selenium.**
   - Data Exploration & Cleaning/Preprocessing using **Pandas, Numpy, Matplotlib, and Seaborn**
 2. Feature engineering and statistical regression modeling using **Sci-kit Learn and Statsmodel**
-  - Feature interactions, scaling, and custom manipulations
-  - Metrics: R<sup>2</sup>, MAE, RMSE, p-values
-  - Cross-validation & Pipeline creation
-  - Regularization using LASSO & Ridge
+   * Feature interactions, scaling, and custom manipulations
+   * Metrics: R<sup>2</sup>, MAE, RMSE, p-values
+   * Cross-validation & Pipeline creation
+   * Regularization using LASSO & Ridge
   
 ## Data Used
 
